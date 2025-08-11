@@ -6,9 +6,12 @@ const {registerUser,
 const validateToken = require('../middleware/validateTokenHandler')
 
 const router = express.Router()
-router.use(validateToken)
+
+// Public routes (no authentication required)
 router.post('/register', registerUser)
 router.post('/login', loginUser)
+
+// Protected routes (authentication required)
 router.get('/current', validateToken, currentUser)
 
 module.exports = router;

@@ -37,9 +37,9 @@ const errorHandler = (err, req, res, next) => {
             console.log("No error, All good !")
             break;
     }
-
     
-    
+    // Call next() to continue to the next middleware
+    next();
 };
 
 module.exports = {errorHandler}

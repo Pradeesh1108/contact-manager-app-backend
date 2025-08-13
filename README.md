@@ -1,4 +1,4 @@
-# MyContacts Backend API
+# MyContactsApp Backend API
 
 ## Project Description
 

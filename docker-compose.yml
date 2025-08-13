@@ -1,0 +1,12 @@
+services:
+  backend:
+    build: .
+    container_name: mycontact-backend
+    ports:
+      - "5001:5001"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run dev
